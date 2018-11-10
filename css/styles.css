@@ -1,95 +1,100 @@
-html, body{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
 }
 
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-body {
-    background-image: url("../images/jellyfish2.jpg");
-    background-size: cover;
-    background-size: center;
-    /* margin: 0 auto; */
-    /* background-size: contain; */
-    background-repeat: no-repeat;
-    color: white;
-    background-position: center;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.jellyfish{
-    margin-top: 180px;
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
-.wrapper {
-    margin: 0 auto;
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr 1fr auto;
+      grid-template-rows: auto 1fr 1fr auto;
+  grid-gap: 10px 0;
+  margin: 0 auto;
+  height: 100%;
 }
 
-
-.message {
-    font-size: 3.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    top: 50%;
+.content > * {
+  background: #bdced4;
 }
 
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-weight: bold;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  font-family: cursive;
+  font-size: 2rem;
+}
 
-/* Stuff from Chris Aquino's icon css */
-.contact-links {
-    padding: 18px 12px;
-    display: flex;
-    justify-content: center;
+main {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
 }
-  
-  .contact-links .fab,
-  .contact-links .fas {
-    background-color: rgba(0, 0, 0, 0.393);
-    padding: 25px;
-    color: white;
-    /*padding: 0 18px;
-    */font-size: 36px;
-    /*transition: all .5s;
-    *//*transition:;
-    font-size.5s,color: .2s;
-    *//*transition: transform .25s cubic-bezier(.89,1.38,.39,-0.53);
-    *//*transition: transform .25s ease-in-out .1s;
-    */
-    border-radius:50%;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    -ms-border-radius:50%;
-    -o-border-radius:50%;
+
+nav {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9/13;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
-  
-  .contact-links a {
-    margin: 0 18px;
-    /* outline: 1px solid cornflowerblue; */
-  }
-  
-  .contact-links a:hover {
-    cursor: pointer;
-  }
-  
-  .contact-links a:hover .fab,
-  .contact-links a:hover .fas,
-  .contact-links a:active .fab,
-  .contact-links a:active .fas {
-    color: rgb(160, 216, 235);
-    /* font-size: 48px; */
-    /* transform: scale(1.7); */
-    /* transform */
-    animation-name: zoom;
-    animation-duration: 0.1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 3;
-  }
+
+nav a {
+  padding: 30px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #011fff;
+  cursor: pointer;
+}
+
+nav i {
+  color: white;
+  font-size: 36px;
+  margin: 0 8px;
+  font-size: 2.2rem;
+}
+
+section {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+}
+
+footer {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  height: 100px;
+  background: #333;
+}
+/*# sourceMappingURL=styles.css.map */

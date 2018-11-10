@@ -1,0 +1,9 @@
+//Mixins
+
+@mixin basic-styles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+  }
