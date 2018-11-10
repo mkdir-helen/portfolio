@@ -32,9 +32,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -42,18 +40,24 @@ header {
   font-weight: bold;
   background: #bdced4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 8;
-  grid-column: 1/9;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
   font-family: cursive;
   font-size: 2rem;
 }
 
 nav {
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 4;
-  grid-column: 9/13;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-column: 7/13;
   display: -ms-grid;
   display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
@@ -82,9 +86,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -103,9 +105,7 @@ article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -119,9 +119,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -137,9 +135,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

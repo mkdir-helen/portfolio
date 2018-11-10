@@ -27,14 +27,16 @@ html {
 
 header{
     @include basic-styles;
-    grid-column: 1/9;
+    grid-column: 1/7;
     font-family: cursive;
     font-size: 2rem;
 }
 
 nav{
-    grid-column: 9/13;
+    grid-column: 7/13;
     display: grid;
+    display: flex;
+    justify-content: flex-end;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     background: #bdced4;
