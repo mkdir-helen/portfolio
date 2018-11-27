@@ -6,7 +6,7 @@ html, body{
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: white;
 }
 
 html {
@@ -19,30 +19,49 @@ html {
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr auto;
-    grid-gap: 10px 0;
+    grid-template-rows: auto auto 1fr 1fr 1fr auto;
+    grid-gap: 1px 0;
     margin: 0 auto;
     height: 100%;
+    @include mQ(730px){
+        grid-template-rows: auto 1fr 1fr 1fr auto;
+    }
 }  
+
 
 header{
     @include basic-styles;
-    grid-column: 1/7;
+    grid-column: 1/13;
     font-family: cursive;
     font-size: 2rem;
+    @include mQ(730px){
+        grid-column: 1/7;
+    }
 }
 
 nav{
-    grid-column: 7/13;
+    grid-column: 1/13;
     display: grid;
-    display: flex;
-    justify-content: flex-end;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    background: #bdced4;
+    background-color: black;
+    
+    @include mQ(730px){
+        display: flex;
+        grid-column: 7/13;
+        justify-content: flex-end;
+        background-color: #bdced4 !important;
+        i{
+            margin: 0 8px;
+            font-size: 2.4rem;
+        }
+        a{
+            padding: 20px;
+        }
+    }
     a{
         // outline: 1px solid red;
-        padding: 20px;
+        padding: 5px;
         text-align: center;
         &:hover{
             background-color: rgb(1, 31, 255);
@@ -51,17 +70,15 @@ nav{
     }
     i{
         color: white;
-        font-size: 36px;
-        margin: 0 8px;
-        font-size: 2.2rem;
+        font-size: 2.0rem;
     }
 }
 section{
     @include basic-styles;
-    grid-column: 1/9;
+    grid-column: 1/13;
 }
 article{
-    grid-column: 9/13;
+    grid-column: 1/13;
     @include basic-styles;
     background-color: black;
 
@@ -77,4 +94,36 @@ footer{
     background: #333;
 }
 
+.wrapper {
+    text-align: center;
+}
+
+.project-holder{
+    margin: 15% auto;
+    width: 95%;
+   outline: 3px solid black;
+    @include mQ(400px){
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+    @include mQ(700px){
+        width: 80%;
+    }
+}
+
+.projects {
+    width: 100%;
+    text-align: center;
+    @include mQ(600px){
+        // width: 500px;
+    }
+    // background: white;
+    img{
+        width: 95%;
+        height: auto;
+        margin: 1%;
+    }
+}
 

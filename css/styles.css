@@ -3,7 +3,7 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: black;
+  background-color: white;
 }
 
 html {
@@ -21,52 +21,77 @@ html {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: auto 1fr 1fr auto;
-      grid-template-rows: auto 1fr 1fr auto;
-  grid-gap: 10px 0;
+  -ms-grid-rows: auto auto 1fr 1fr 1fr auto;
+      grid-template-rows: auto auto 1fr 1fr 1fr auto;
+  grid-gap: 1px 0;
   margin: 0 auto;
   height: 100%;
 }
 
+@media screen and (min-width: 730px) {
+  .content {
+    -ms-grid-rows: auto 1fr 1fr 1fr auto;
+        grid-template-rows: auto 1fr 1fr 1fr auto;
+  }
+}
+
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
   font-weight: bold;
   background: #bdced4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 6;
-  grid-column: 1/7;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
   font-family: cursive;
   font-size: 2rem;
 }
 
+@media screen and (min-width: 730px) {
+  header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+}
+
 nav {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 6;
-  grid-column: 7/13;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
   display: -ms-grid;
   display: grid;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  background: #bdced4;
+  background-color: black;
+}
+
+@media screen and (min-width: 730px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7/13;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: #bdced4 !important;
+  }
+  nav i {
+    margin: 0 8px;
+    font-size: 2.4rem;
+  }
+  nav a {
+    padding: 20px;
+  }
 }
 
 nav a {
-  padding: 20px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -77,38 +102,24 @@ nav a:hover {
 
 nav i {
   color: white;
-  font-size: 36px;
-  margin: 0 8px;
-  font-size: 2.2rem;
+  font-size: 2.0rem;
 }
 
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
   font-weight: bold;
   background: #bdced4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 8;
-  grid-column: 1/9;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
 }
 
 article {
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 4;
-  grid-column: 9/13;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
   padding-left: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
   font-weight: bold;
   background: #bdced4;
@@ -116,13 +127,7 @@ article {
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
   font-weight: bold;
   background: #bdced4;
@@ -132,13 +137,7 @@ main {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
   font-weight: bold;
   background: #bdced4;
@@ -147,5 +146,45 @@ footer {
   grid-column: 1/13;
   height: 100px;
   background: #333;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.project-holder {
+  margin: 15% auto;
+  width: 95%;
+  outline: 3px solid black;
+}
+
+@media screen and (min-width: 400px) {
+  .project-holder {
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .project-holder {
+    width: 80%;
+  }
+}
+
+.projects {
+  width: 100%;
+  text-align: center;
+}
+
+.projects img {
+  width: 95%;
+  height: auto;
+  margin: 1%;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,11 +1,24 @@
 //Mixins
 
 @mixin basic-styles {
-    display: flex;
+    // display: flex;
     // justify-content: center;
     padding-left: 10px;
-    align-items: center;
+    // align-items: center;
     color: white;
     font-weight: bold;
     background: #bdced4;
   }
+
+@mixin mQ($args...){
+  @if length($args) == 1{
+    @media screen and (min-width: nth($args, 1)){
+      @content;
+    }
+  }
+  @if length($args) == 2{
+    @media screen and (min-width: nth($args, 1)) and (max-width: nth($args, 2)){
+      @content;
+    }
+  }
+}  
