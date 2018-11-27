@@ -16,6 +16,10 @@ html {
           box-sizing: inherit;
 }
 
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .content {
   display: -ms-grid;
   display: grid;
@@ -136,22 +140,6 @@ main {
   grid-column: 1/13;
 }
 
-footer {
-  padding-left: 10px;
-  color: white;
-  font-weight: bold;
-  background: #bdced4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
-  height: 100px;
-  background: #333;
-}
-
-.wrapper {
-  text-align: center;
-}
-
 .project-holder {
   margin: 15% auto;
   width: 95%;
@@ -179,12 +167,23 @@ footer {
 
 .projects {
   width: 100%;
-  text-align: center;
 }
 
 .projects img {
   width: 95%;
   height: auto;
   margin: 1%;
+}
+
+footer {
+  padding-left: 10px;
+  color: white;
+  font-weight: bold;
+  background: #bdced4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  height: 100px;
+  background: #333;
 }
 /*# sourceMappingURL=styles.css.map */

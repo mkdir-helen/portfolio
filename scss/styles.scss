@@ -16,6 +16,10 @@ html {
     box-sizing: inherit;
   }
 
+  h1{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -87,16 +91,7 @@ main{
     @include basic-styles;
     grid-column: 1/13;
 }
-footer{
-    @include basic-styles;
-    grid-column: 1/13;
-    height: 100px;
-    background: #333;
-}
 
-.wrapper {
-    text-align: center;
-}
 
 .project-holder{
     margin: 15% auto;
@@ -115,15 +110,18 @@ footer{
 
 .projects {
     width: 100%;
-    text-align: center;
-    @include mQ(600px){
-        // width: 500px;
-    }
-    // background: white;
     img{
         width: 95%;
         height: auto;
         margin: 1%;
     }
 }
+
+footer{
+    @include basic-styles;
+    grid-column: 1/13;
+    height: 100px;
+    background: #333;
+}
+
 
