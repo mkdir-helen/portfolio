@@ -9,6 +9,7 @@ html, body{
     background-color: white;
 }
 
+
 html {
     box-sizing: border-box;
   }
@@ -81,12 +82,80 @@ section{
     @include basic-styles;
     grid-column: 1/13;
 }
+
+.profile{
+    margin: auto;
+    .iam{
+        font-family: cursive;
+        font-size: 2rem;
+        padding-left: 1em;
+    }
+    .p{
+        @include mQ(400px){
+
+            padding-top: 5%;
+        }
+    }
+}
+.img-holder{
+    width: 75%;
+    margin: auto;
+    @include mQ(400px){
+        margin-right: 10px;
+        margin-top: 5px;
+        width: 300px;
+        float: left;
+        shape-outside: circle(53%);
+    }
+    
+    img{
+        position: relative;
+        width: 100%;
+        border: 4px solid white;
+        // box-shadow: 5px 10px 8px #555555;
+        border-radius: 55%;
+        -webkit-border-radius: 55%;
+        -moz-border-radius: 55%;
+        -ms-border-radius: 55%;
+        -o-border-radius: 55%;
+}
+}
+
 article{
     grid-column: 1/13;
     @include basic-styles;
     background-color: black;
 
 }
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.what-i-know{
+    display: flex;
+}
+.what-im-learning-now{
+    display: flex;
+}
+.icons{
+    font-size: 2.4rem;
+    margin-right: 10px;
+    text-align: center;
+    img{
+        height: 39px;
+        
+    }
+    .icon8p{
+        margin-top: 2px;
+    }
+    i{
+        text-align: center;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+}
+
 main{
     @include basic-styles;
     grid-column: 1/13;
@@ -122,6 +191,10 @@ footer{
     grid-column: 1/13;
     height: 100px;
     background: #333;
+    a{
+        color: white;
+        text-decoration: none;
+    }
 }
 
 
