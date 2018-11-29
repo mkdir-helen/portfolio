@@ -81,6 +81,7 @@ nav{
 section{
     @include basic-styles;
     grid-column: 1/13;
+    padding: 0 10px;
 }
 
 .profile{
@@ -91,10 +92,18 @@ section{
         padding-left: 1em;
     }
     .p{
+        // outline: 1px solid white;
+        max-width: 700px;
         @include mQ(400px){
 
             padding-top: 5%;
         }
+        @include mQ(630px){
+            margin-left: 70px;
+            padding-right: 10px;
+        }
+        
+        
     }
 }
 .img-holder{
@@ -103,7 +112,7 @@ section{
     @include mQ(400px){
         margin-right: 10px;
         margin-top: 5px;
-        width: 300px;
+        width: 250px;
         float: left;
         shape-outside: circle(53%);
     }
