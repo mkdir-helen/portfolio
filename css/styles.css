@@ -4,6 +4,8 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -17,7 +19,7 @@ html {
 }
 
 h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .content {
@@ -68,7 +70,7 @@ nav {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  background-color: black;
+  background-color: #81acbb;
 }
 
 @media screen and (min-width: 730px) {
@@ -91,6 +93,9 @@ nav {
   nav a {
     padding: 20px;
   }
+  nav a:hover {
+    background-color: #c0bdd4 !important;
+  }
 }
 
 nav a {
@@ -99,7 +104,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #011fff;
+  background-color: #bdd4c3;
   cursor: pointer;
 }
 
@@ -116,6 +121,7 @@ section {
   -ms-grid-column-span: 12;
   grid-column: 1/13;
   padding: 0 10px;
+  outline: 1px solid white;
 }
 
 .profile {
@@ -128,10 +134,6 @@ section {
   padding-left: 1em;
 }
 
-.profile .p {
-  max-width: 700px;
-}
-
 @media screen and (min-width: 400px) {
   .profile .p {
     padding-top: 5%;
@@ -142,6 +144,12 @@ section {
   .profile .p {
     margin-left: 70px;
     padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .profile .p {
+    font-size: 1.2rem;
   }
 }
 
@@ -178,28 +186,27 @@ article {
   color: white;
   font-weight: bold;
   background: #bdced4;
-  background-color: black;
+  background-color: #d4c4bd;
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.what-i-know {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.what-im-learning-now {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 500px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .icons {
@@ -236,10 +243,10 @@ main {
 .project-holder {
   margin: 15% auto;
   width: 95%;
-  outline: 3px solid black;
+  outline: 3px solid #81acbb;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 900px) {
   .project-holder {
     height: auto;
     display: -ms-grid;
@@ -252,20 +259,27 @@ main {
   }
 }
 
-@media screen and (min-width: 700px) {
-  .project-holder {
-    width: 80%;
-  }
-}
-
 .projects {
   width: 100%;
 }
 
-.projects img {
-  width: 95%;
-  height: auto;
-  margin: 1%;
+.projects .video-filler {
+  width: 100% !important;
+  height: 75% !important;
+  background: #81acbb;
+}
+
+.projects video {
+  width: 100%    !important;
+  height: 75%   !important;
+}
+
+@media screen and (min-width: 900px) {
+  .projects video {
+    margin-top: 15%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
 }
 
 footer {
@@ -276,7 +290,7 @@ footer {
   -ms-grid-column-span: 12;
   grid-column: 1/13;
   height: 100px;
-  background: #333;
+  background: #81acbb;
 }
 
 footer a {

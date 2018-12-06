@@ -7,6 +7,8 @@ html, body{
     padding: 0;
     margin: 0;
     background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -18,7 +20,7 @@ html {
   }
 
   h1{
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
 .content {
@@ -49,7 +51,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    background-color: black;
+    background-color: #81acbb;
     
     @include mQ(730px){
         display: flex;
@@ -62,6 +64,9 @@ nav{
         }
         a{
             padding: 20px;
+            &:hover{
+                background-color: #c0bdd4 !important;
+            }
         }
     }
     a{
@@ -69,7 +74,7 @@ nav{
         padding: 5px;
         text-align: center;
         &:hover{
-            background-color: rgb(1, 31, 255);
+            background-color: #bdd4c3;
             cursor: pointer;
         }
     }
@@ -82,25 +87,34 @@ section{
     @include basic-styles;
     grid-column: 1/13;
     padding: 0 10px;
+    outline: 1px solid white;
 }
 
 .profile{
+    // max-width: 95%;
     margin: auto;
+    // outline: 1px solid yellow;
+    
     .iam{
         font-family: cursive;
         font-size: 2rem;
         padding-left: 1em;
     }
     .p{
-        // outline: 1px solid white;
-        max-width: 700px;
+        // outline: 1px solid red;
+        // max-width: 700px;
+        
         @include mQ(400px){
-
+            
             padding-top: 5%;
         }
         @include mQ(630px){
             margin-left: 70px;
             padding-right: 10px;
+        }
+        @include mQ(900px){
+            font-size: 1.2rem;
+
         }
         
         
@@ -133,19 +147,20 @@ section{
 article{
     grid-column: 1/13;
     @include basic-styles;
-    background-color: black;
+    background-color: #d4c4bd;
 
 }
 .container{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include mQ(500px){
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+    }
 }
-.what-i-know{
-    display: flex;
-}
-.what-im-learning-now{
-    display: flex;
-}
+
 .icons{
     font-size: 2.4rem;
     margin-right: 10px;
@@ -174,32 +189,40 @@ main{
 .project-holder{
     margin: 15% auto;
     width: 95%;
-   outline: 3px solid black;
-    @include mQ(400px){
+   outline: 3px solid #81acbb;
+    @include mQ(900px){
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
     }
-    @include mQ(700px){
-        width: 80%;
-    }
+    
 }
 
 .projects {
     width: 100%;
-    img{
-        width: 95%;
-        height: auto;
-        margin: 1%;
+    .video-filler{
+        width: 100% !important;
+        height: 75% !important;
+        background: #81acbb;
+        // margin: 1%;
     }
+    video {
+        width: 100%    !important;
+        height: 75%   !important;
+        @include mQ(900px){
+            margin-top: 15%;
+            object-fit: fill;
+
+        }
+      }
 }
 
 footer{
     @include basic-styles;
     grid-column: 1/13;
     height: 100px;
-    background: #333;
+    background: #81acbb;
     a{
         color: white;
         text-decoration: none;
