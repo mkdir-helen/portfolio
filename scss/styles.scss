@@ -157,7 +157,7 @@ article{
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-
+        padding-bottom: 10px;
     }
 }
 
@@ -187,31 +187,35 @@ main{
 
 
 .project-holder{
-    margin: 15% auto;
+    margin: 5% auto;
     width: 95%;
-   outline: 3px solid #81acbb;
+   outline: 5px solid #81acbb;
+   background: #81acbb;
     @include mQ(900px){
         height: auto;
+        padding-bottom: 0%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
+        grid-gap: 5px;
     }
     
 }
 
 .projects {
+    background: #d4bebd;
+    padding-bottom: 25px;
     width: 100%;
-    .video-filler{
-        width: 100% !important;
-        height: 75% !important;
-        background: #81acbb;
-        // margin: 1%;
+    height: 100%;
+    margin-bottom: 5px;
+    @include mQ(900px){
+        margin-bottom: 0;
     }
     video {
         width: 100%    !important;
         height: 75%   !important;
         @include mQ(900px){
-            margin-top: 15%;
+            // margin-top: 15%;
             object-fit: fill;
 
         }
