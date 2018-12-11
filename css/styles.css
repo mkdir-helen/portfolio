@@ -20,6 +20,7 @@ html {
 
 h1 {
   font-family: 'Montserrat', sans-serif;
+  margin-left: 3px;
 }
 
 .content {
@@ -50,6 +51,7 @@ header {
   grid-column: 1/13;
   font-family: cursive;
   font-size: 2rem;
+  padding-left: 3px;
 }
 
 @media screen and (min-width: 730px) {
@@ -132,6 +134,10 @@ section {
   font-family: cursive;
   font-size: 2rem;
   padding-left: 1em;
+}
+
+.profile .p {
+  font-family: 'Lora', serif;
 }
 
 @media screen and (min-width: 400px) {
@@ -230,6 +236,7 @@ article {
 
 .icons p {
   font-size: 0.9rem;
+  font-family: "Font Awesome 5 Brands";
 }
 
 main {
@@ -266,6 +273,7 @@ main {
 .projects {
   background: #d4bebd;
   padding-bottom: 25px;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   margin-bottom: 5px;
@@ -274,6 +282,7 @@ main {
 @media screen and (min-width: 900px) {
   .projects {
     margin-bottom: 0;
+    padding-bottom: 100px;
   }
 }
 
@@ -289,19 +298,98 @@ main {
   }
 }
 
+.projects h3 {
+  text-align: center;
+  margin: 8px auto;
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+  font-weight: 900;
+  font-family: fantasy;
+  padding-bottom: 5px;
+}
+
+.projects button {
+  background: #bfbdd4;
+  border: 2px solid white;
+  margin-right: 15px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.projects button a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.projects .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3px;
+}
+
+.projects .recipe {
+  font-family: "Font Awesome 5 Brands";
+  margin: auto;
+  width: 95%;
+}
+
+@media screen and (min-width: 666px) and (max-width: 900px) {
+  .projects .recipe {
+    width: 89%;
+  }
+}
+
+.projects .explain.coming-soon {
+  visibility: hidden;
+}
+
 footer {
   color: white;
   font-weight: bold;
   background: #bdced4;
+  text-align: center;
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1/13;
   height: 100px;
   background: #81acbb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+}
+
+footer span {
+  font-size: 15px;
+}
+
+footer div {
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  footer div {
+    width: 50%;
+  }
 }
 
 footer a {
   color: white;
-  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -21,6 +21,7 @@ html {
 
   h1{
     font-family: 'Montserrat', sans-serif;
+    margin-left: 3px;
   }
 
 .content {
@@ -41,6 +42,7 @@ header{
     grid-column: 1/13;
     font-family: cursive;
     font-size: 2rem;
+    padding-left: 3px;
     @include mQ(730px){
         grid-column: 1/7;
     }
@@ -103,7 +105,7 @@ section{
     .p{
         // outline: 1px solid red;
         // max-width: 700px;
-        
+        font-family: 'Lora', serif;
         @include mQ(400px){
             
             padding-top: 5%;
@@ -177,6 +179,7 @@ article{
     }
     p{
         font-size: 0.9rem;
+        font-family: "Font Awesome 5 Brands";
     }
 }
 
@@ -205,11 +208,13 @@ main{
 .projects {
     background: #d4bebd;
     padding-bottom: 25px;
+    overflow:hidden;
     width: 100%;
     height: 100%;
     margin-bottom: 5px;
     @include mQ(900px){
         margin-bottom: 0;
+        padding-bottom: 100px;
     }
     video {
         width: 100%    !important;
@@ -220,16 +225,76 @@ main{
 
         }
       }
+    
+    h3{
+        text-align:center;
+        margin: 8px auto;
+        font-size: 1.5rem;
+        letter-spacing: 0.4rem;
+        font-weight: 900;
+        font-family: fantasy;
+        // border-bottom: 3px solid white;
+        padding-bottom: 5px;
+    }  
+    button{
+        background: #bfbdd4;
+        border: 2px solid white;
+        margin-right: 15px;
+        font-size: 0.9rem;
+        a{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            color: white;
+        }
+        border-radius: 8px    ;
+        -webkit-border-radius: 8px    ;
+        -moz-border-radius: 8px    ;
+        -ms-border-radius: 8px    ;
+        -o-border-radius: 8px    ;
+}  
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3px;
+    }
+    .recipe{
+        font-family: "Font Awesome 5 Brands";
+        margin: auto;
+        width: 95%;
+        @include mQ(666px, 900px){
+            // text-align: center;
+            width: 89%;
+        }
+
+    }
+    .explain.coming-soon{
+        visibility: hidden;
+    } 
 }
 
 footer{
     @include basic-styles;
+    text-align: center;
     grid-column: 1/13;
     height: 100px;
     background: #81acbb;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    span{
+        font-size: 15px;
+    }
+    div{
+        margin: auto;
+        width: 100%;
+        @include mQ(500px){
+            width: 50%;
+        }
+    }
     a{
         color: white;
-        text-decoration: none;
+        // text-decoration: none;
     }
 }
 
