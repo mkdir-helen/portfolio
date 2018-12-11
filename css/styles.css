@@ -304,7 +304,8 @@ main {
   font-size: 1.5rem;
   letter-spacing: 0.4rem;
   font-weight: 900;
-  font-family: fantasy;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: underline;
   padding-bottom: 5px;
 }
 
