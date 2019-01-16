@@ -8,6 +8,14 @@ html, body {
   overflow-x: hidden;
 }
 
+section, article, main {
+  padding: 0 5px;
+}
+
+nav {
+  padding-right: 5px;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -51,7 +59,7 @@ header {
   grid-column: 1/13;
   font-family: cursive;
   font-size: 2rem;
-  padding-left: 3px;
+  padding-left: 7px;
 }
 
 @media screen and (min-width: 730px) {
@@ -275,32 +283,45 @@ main {
   padding-bottom: 25px;
   overflow: hidden;
   width: 100%;
-  height: 100%;
   margin-bottom: 5px;
 }
 
 @media screen and (min-width: 900px) {
   .projects {
     margin-bottom: 0;
-    padding-bottom: 100px;
   }
 }
 
 .projects video {
   width: 100%    !important;
-  height: 75%   !important;
 }
 
 @media screen and (min-width: 900px) {
   .projects video {
+    height: 75%   !important;
     -o-object-fit: fill;
        object-fit: fill;
   }
 }
 
+.projects .youvideo {
+  height: 300px;
+}
+
+@media screen and (min-width: 900px) {
+  .projects .youvideo {
+    height: 58%;
+  }
+}
+
+.projects iframe {
+  height: 100%;
+  width: 100%;
+}
+
 .projects h3 {
   text-align: center;
-  margin: 8px auto;
+  margin: 8px auto 0 auto;
   font-size: 1.5rem;
   letter-spacing: 0.4rem;
   font-weight: 900;
@@ -346,6 +367,10 @@ main {
   width: 95%;
 }
 
+.projects .recipe ul {
+  margin: auto;
+}
+
 @media screen and (min-width: 666px) and (max-width: 900px) {
   .projects .recipe {
     width: 89%;
@@ -354,6 +379,12 @@ main {
 
 .projects .explain.coming-soon {
   visibility: hidden;
+}
+
+.projects .projectinfo {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 footer {
