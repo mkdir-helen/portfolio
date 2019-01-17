@@ -1,1 +1,427 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+section, article, main {
+  padding: 0 5px;
+}
+
+nav {
+  padding-right: 5px;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 3px;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto 1fr 1fr 1fr auto;
+      grid-template-rows: auto auto 1fr 1fr 1fr auto;
+  grid-gap: 1px 0;
+  margin: 0 auto;
+  height: 100%;
+}
+
+@media screen and (min-width: 730px) {
+  .content {
+    -ms-grid-rows: auto 1fr 1fr 1fr auto;
+        grid-template-rows: auto 1fr 1fr 1fr auto;
+  }
+}
+
+header {
+  color: white;
+  font-weight: bold;
+  background: #bdced4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  font-family: cursive;
+  font-size: 2rem;
+  padding-left: 7px;
+}
+
+@media screen and (min-width: 730px) {
+  header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+  }
+}
+
+nav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  background-color: #81acbb;
+}
+
+@media screen and (min-width: 730px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7/13;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: #bdced4 !important;
+  }
+  nav i {
+    margin: 0 8px;
+    font-size: 2.4rem;
+  }
+  nav a {
+    padding: 20px;
+  }
+  nav a:hover {
+    background-color: #c0bdd4 !important;
+  }
+}
+
+nav a {
+  padding: 5px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #bdd4c3;
+  cursor: pointer;
+}
+
+nav i {
+  color: white;
+  font-size: 2.0rem;
+}
+
+section {
+  color: white;
+  font-weight: bold;
+  background: #bdced4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  padding: 0 10px;
+  outline: 1px solid white;
+}
+
+.profile {
+  margin: auto;
+}
+
+.profile .iam {
+  font-family: cursive;
+  font-size: 2rem;
+  padding-left: 1em;
+}
+
+.profile .p {
+  font-family: 'Lora', serif;
+}
+
+@media screen and (min-width: 400px) {
+  .profile .p {
+    padding-top: 5%;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .profile .p {
+    margin-left: 70px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .profile .p {
+    font-size: 1.2rem;
+  }
+}
+
+.img-holder {
+  width: 75%;
+  margin: auto;
+}
+
+@media screen and (min-width: 400px) {
+  .img-holder {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 250px;
+    float: left;
+    shape-outside: circle(53%);
+  }
+}
+
+.img-holder img {
+  position: relative;
+  width: 100%;
+  border: 4px solid white;
+  border-radius: 55%;
+  -webkit-border-radius: 55%;
+  -moz-border-radius: 55%;
+  -ms-border-radius: 55%;
+  -o-border-radius: 55%;
+}
+
+article {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  color: white;
+  font-weight: bold;
+  background: #bdced4;
+  background-color: #d4c4bd;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+}
+
+.icons {
+  font-size: 2.4rem;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.icons img {
+  height: 39px;
+}
+
+.icons .icon8p {
+  margin-top: 2px;
+}
+
+.icons i {
+  text-align: center;
+}
+
+.icons p {
+  font-size: 0.9rem;
+  font-family: "Font Awesome 5 Brands";
+}
+
+main {
+  color: white;
+  font-weight: bold;
+  background: #bdced4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+}
+
+.project-holder {
+  margin: 5% auto;
+  width: 95%;
+  outline: 5px solid #81acbb;
+  background: #81acbb;
+}
+
+@media screen and (min-width: 900px) {
+  .project-holder {
+    height: auto;
+    padding-bottom: 0%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 5px;
+  }
+}
+
+.projects {
+  background: #d4bebd;
+  padding-bottom: 25px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 900px) {
+  .projects {
+    margin-bottom: 0;
+  }
+}
+
+.projects video {
+  width: 100%    !important;
+}
+
+@media screen and (min-width: 900px) {
+  .projects video {
+    height: 75%   !important;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+
+.projects .youvideo {
+  height: 300px;
+}
+
+@media screen and (min-width: 900px) {
+  .projects .youvideo {
+    height: 58%;
+  }
+}
+
+.projects iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.projects h3 {
+  text-align: center;
+  margin: 8px auto 0 auto;
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+.projects button {
+  background: #bfbdd4;
+  border: 2px solid white;
+  margin-right: 15px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.projects button a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.projects .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3px;
+}
+
+.projects .recipe {
+  font-family: "Font Awesome 5 Brands";
+  margin: auto;
+  width: 95%;
+}
+
+.projects .recipe ul {
+  margin: auto;
+}
+
+@media screen and (min-width: 666px) and (max-width: 900px) {
+  .projects .recipe {
+    width: 89%;
+  }
+}
+
+.projects .explain.coming-soon {
+  visibility: hidden;
+}
+
+.projects .projectinfo {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+footer {
+  color: white;
+  font-weight: bold;
+  background: #bdced4;
+  text-align: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+  height: 100px;
+  background: #81acbb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+}
+
+footer span {
+  font-size: 15px;
+}
+
+footer div {
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  footer div {
+    width: 50%;
+  }
+}
+
+footer a {
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
