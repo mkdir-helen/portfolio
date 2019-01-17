@@ -12,10 +12,6 @@ section, article, main {
   padding: 0 5px;
 }
 
-nav {
-  padding-right: 5px;
-}
-
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -32,12 +28,10 @@ h1 {
 }
 
 .content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: auto auto 1fr 1fr 1fr auto;
-      grid-template-rows: auto auto 1fr 1fr 1fr auto;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 55px auto;
+      grid-template-rows: 55px auto;
   grid-gap: 1px 0;
   margin: 0 auto;
   height: 100%;
@@ -50,30 +44,78 @@ h1 {
   }
 }
 
+.panel {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1px 0;
+  height: 45px;
+}
+
+@media screen and (min-width: 730px) {
+  .panel {
+    -ms-grid-rows: 1fr 1fr 1fr auto;
+        grid-template-rows: 1fr 1fr 1fr auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+}
+
 header {
   color: white;
   font-weight: bold;
   background: #bdced4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: cursive;
-  font-size: 2rem;
-  padding-left: 7px;
+}
+
+header .name {
+  text-align: center;
+}
+
+header .contact-links {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+@media screen and (min-width: 375px) {
+  header {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width: 730px) {
   header {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-column: 1/7;
+    padding-left: 7px;
+    height: 55px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 1px solid white;
+  }
+  header .name {
+    text-align: left;
+  }
+  header .contact-links {
+    border-top: none;
+    border-bottom: none;
   }
 }
 
-nav {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
+.contact-links {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -81,44 +123,52 @@ nav {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   background-color: #81acbb;
+  color: white;
+  padding-right: 5px;
+}
+
+.contact-links i {
+  margin: 0 8px;
+  font-size: 2.1rem;
+}
+
+.contact-links a {
+  padding: 20px;
 }
 
 @media screen and (min-width: 730px) {
-  nav {
+  .contact-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 6;
-    grid-column: 7/13;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     background-color: #bdced4 !important;
   }
-  nav i {
+  .contact-links i {
     margin: 0 8px;
     font-size: 2.4rem;
   }
-  nav a {
+  .contact-links a {
     padding: 20px;
   }
-  nav a:hover {
+  .contact-links a:hover {
     background-color: #c0bdd4 !important;
   }
 }
 
-nav a {
+.contact-links a {
   padding: 5px;
   text-align: center;
 }
 
-nav a:hover {
+.contact-links a:hover {
   background-color: #bdd4c3;
   cursor: pointer;
 }
 
-nav i {
+.contact-links i {
   color: white;
   font-size: 2.0rem;
 }
@@ -127,11 +177,20 @@ section {
   color: white;
   font-weight: bold;
   background: #bdced4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
+  margin-top: 70px;
   padding: 0 10px;
-  outline: 1px solid white;
+}
+
+@media screen and (min-width: 375px) {
+  section {
+    margin-top: 110px;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  section {
+    margin-top: 56px;
+  }
 }
 
 .profile {
@@ -194,9 +253,6 @@ section {
 }
 
 article {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
   color: white;
   font-weight: bold;
   background: #bdced4;
@@ -251,9 +307,6 @@ main {
   color: white;
   font-weight: bold;
   background: #bdced4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
 }
 
 .project-holder {
@@ -392,9 +445,6 @@ footer {
   font-weight: bold;
   background: #bdced4;
   text-align: center;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1/13;
   height: 100px;
   background: #81acbb;
   display: -webkit-box;
